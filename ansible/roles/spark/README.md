@@ -1,22 +1,32 @@
-Role Name
+Spark
 =========
 
-A brief description of the role goes here.
+This role allows to install Spark in the target nodes, including an option to
+deploy a Spark Standalone cluster with one master.
 
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+A Debian based OS.
 
 Role Variables
 --------------
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+Variable | Description | Default
+--- | --- | ---
+spark_version | Version of Spark to install | 2.2.0
+spark_user | System user owner of the Spark distribution (will be created) | hduser
+spark_group | System group owner of the Spark distribution (will be created) | hadoop
+spark_standalone_cluster | Whether to install an standalone cluster or not | false
+spark_master | Hostname of the host which will act as Spark standalone master | localhost
+spark_is_master | If the node is a Spark standalone master (installs the service) | false
+spark_is_worker | If the node is a Spark standalone worker (installs the service) | false
+apache_dist_server | Apache mirror from where Spark is downloaded |  http://www-eu.apache.org/dist
 
 Dependencies
 ------------
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+No dependencies.
 
 Example Playbook
 ----------------
@@ -25,14 +35,9 @@ Including an example of how to use your role (for instance, with variables passe
 
     - hosts: servers
       roles:
-         - { role: username.rolename, x: 42 }
+         - { role: spark }
 
 License
 -------
 
-BSD
-
-Author Information
-------------------
-
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+Apache
