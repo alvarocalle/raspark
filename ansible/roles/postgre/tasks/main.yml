@@ -1,0 +1,30 @@
+---
+# tasks file for postgresql
+
+# Install PostgreSQL
+- name: "[POSTGRESQL] Install PostgreSQL"
+  apt:
+    name: postgresql
+    state: latest
+    with_items:
+      psycopg2
+      libpq-dev
+      postgresql-client 
+      postgresql-client-common
+  tags:
+    - postgresql
+
+# Create a new schema {{ postgresql_schema_name }} 
+- postgresql_schema:
+    name: "{{ postgresql_schema_name }}"
+  tags:
+    - postgresql
+
+# Create a new user ({{ postgresql_user }}) for {{ postgresql_schema_name }} 
+- postgresql_user:
+    db: "{{ postgresql_schema_name }}"
+    name: "{{ postgresql_user }}"
+    password: "{{ postgresql_password }}"
+    priv: ALL
+  tags:
+    - postgresql
