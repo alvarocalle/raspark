@@ -1,0 +1,14 @@
+---
+# defaults file for hadoop
+
+hadoop_version: 2.8.2
+hadoop_user: hduser
+hadoop_group: hadoop
+hadoop_namenode: localhost
+hadoop_resourcemanager: localhost
+hadoop_nodemanager_port: 8040
+hadoop_is_namenode: false
+hadoop_is_datanode: false
+hadoop_is_resourcemanager: false
+hadoop_is_nodemanager: false
+apache_dist_server: http://www-eu.apache.org/dist

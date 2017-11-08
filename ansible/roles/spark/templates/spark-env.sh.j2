@@ -1,0 +1,5 @@
+{% if spark_standalone_cluster %}
+SPARK_WORKER_MEMORY=650m
+SPARK_DAEMON_MEMORY=650m
+{% endif %}
+JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:jre/bin/java::")
