@@ -13,7 +13,7 @@
     name: "{{ hadoop_user }}"
     generate_ssh_key: yes
     group: "{{ hadoop_group }}"
-    groups: sudo
+    #groups: sudo
     append: yes
     shell: /bin/bash
     state: present
