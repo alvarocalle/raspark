@@ -13,7 +13,7 @@
 
 - name: "[HADOOP] Ensure YARN NodeManager is started"
   service:
-    name: yarn-resource-manager
+    name: yarn-node-manager
     state: started
     enabled: true
   tags:

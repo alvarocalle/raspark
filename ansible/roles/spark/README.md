@@ -21,6 +21,7 @@ spark_standalone_cluster | Whether to install an standalone cluster or not | fal
 spark_master | Hostname of the host which will act as Spark standalone master | localhost
 spark_is_master | If the node is a Spark standalone master (installs the service) | false
 spark_is_worker | If the node is a Spark standalone worker (installs the service) | false
+spark_hadoop_conf | Hadoop configuration folder | /opt/hadoop/etc/hadoop
 apache_dist_server | Apache mirror from where Spark is downloaded |  http://www-eu.apache.org/dist
 
 Dependencies
