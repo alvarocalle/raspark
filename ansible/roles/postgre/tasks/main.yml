@@ -6,11 +6,11 @@
   apt:
     name: postgresql
     state: latest
-    with_items:
-      psycopg2
-      libpq-dev
-      postgresql-client 
-      postgresql-client-common
+    # with_items:
+    #   psycopg2
+    #   libpq-dev
+    #   postgresql-client 
+    #   postgresql-client-common
   tags:
     - postgresql
 
