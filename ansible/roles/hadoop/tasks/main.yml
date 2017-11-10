@@ -19,7 +19,5 @@
 - import_tasks: nodemanager.yml
   when: hadoop_is_nodemanager
 
-- meta: flush_handlers
-
 - import_tasks: format-dfs.yml
   when: hadoop_is_namenode

@@ -1,10 +1,19 @@
 ---
 # tasks file for hadoop install tasks
 
-- name: "[HADOOP] Install Java"
+- name: "[HADOOP] Install Java (Debian based)"
   apt:
-    name: oracle-java8-jdk
+    name: openjdk-8-jdk
     state: latest
+  when: ansible_os_family == "Debian"
+  tags:
+    - hadoop
+
+- name: "[HADOOP] Install Java (Suse based)"
+  zypper:
+    name: java-1_8_0-openjdk
+    state: latest
+  when: ansible_os_family == "Suse"
   tags:
     - hadoop
 
