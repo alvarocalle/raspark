@@ -1,6 +1,6 @@
 galaxy_info:
-  author: Rober Veral
-  description: A Hadoop (HDFS and YARN) role.
+  author: Juan López
+  description: A PostgreSQL role.
   company: Datio
 
   # If the issue tracker for your role is not on github, uncomment the
@@ -14,7 +14,7 @@ galaxy_info:
   # - GPLv3
   # - Apache
   # - CC-BY
-  license: Apache
+  license: PostgreSQL
 
   min_ansible_version: 1.2
 
