@@ -21,8 +21,10 @@
   become: yes
   become_user: root
   vars:
+    - spark_standalone_cluster: true
     - hadoop_namenode: "{{ groups['masters'][0] }}"
     - hadoop_resourcemanager: "{{ groups['masters'][0] }}"
+    - spark_master: "{{ groups['masters'][0] }}"
     - spark_hadoop_conf: "/opt/hadoop-{{ hadoop_version }}/etc/hadoop"
   roles:
     - hadoop
@@ -38,6 +40,7 @@
   become: yes
   become_user: root
   vars:
+    - spark_master: "{{ groups['masters'][0] }}"
     - hadoop_namenode: "{{ groups['masters'][0] }}"
     - hadoop_resourcemanager: "{{ groups['masters'][0] }}"
     - zeppelin_spark_home: "/opt/spark-{{ spark_version }}-bin-hadoop2.7"
