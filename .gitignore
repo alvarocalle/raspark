@@ -1,2 +1,6 @@
 inventory
 test.yml
+/.idea/
+/testJob/.idea/
+/testJob/project/target/
+/testJob/project/project/target/
