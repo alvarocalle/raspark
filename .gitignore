@@ -4,3 +4,4 @@ test.yml
 /testJob/.idea/
 /testJob/project/target/
 /testJob/project/project/target/
+/testJob/target/*
