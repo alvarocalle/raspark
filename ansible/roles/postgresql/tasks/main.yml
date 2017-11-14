@@ -64,7 +64,7 @@
   lineinfile:
     path: /var/lib/pgsql/data/postgresql.conf
     regexp: '^listen_addresses ='
-    line: 'listen_addresses = *'
+    line: "listen_addresses = '*'"
   when: ansible_os_family == "Suse"  
   notify:
   - "[POSTGRESQL] Restart PostgreSQL"
