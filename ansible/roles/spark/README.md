@@ -7,7 +7,7 @@ deploy a Spark Standalone cluster with one master.
 Requirements
 ------------
 
-A Debian based OS.
+A Debian or Suse based OS.
 
 Role Variables
 --------------

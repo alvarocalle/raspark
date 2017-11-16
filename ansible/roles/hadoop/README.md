@@ -7,7 +7,7 @@ manager. It doesn't support HA, it can only handle one master.
 Requirements
 ------------
 
-A Debian based OS.
+A Debian or Suse based OS.
 
 Role Variables
 --------------
